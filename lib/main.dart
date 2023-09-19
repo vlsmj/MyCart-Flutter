@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_cart_provider/common/theme.dart';
+import 'package:my_cart_provider/models/cart.dart';
 import 'package:my_cart_provider/models/catalog.dart';
 import 'package:my_cart_provider/screens/cart.dart';
 import 'package:my_cart_provider/screens/home.dart';
@@ -37,7 +38,14 @@ class MainApp extends StatelessWidget {
       providers: [
         Provider(
           create: (context) => CatalogModel(),
-        )
+        ),
+        ChangeNotifierProxyProvider<CatalogModel, CartModel>(
+            create: (context) => CartModel(),
+            update: (context, catalog, cart) {
+              if (cart == null) throw ArgumentError.notNull('cart');
+              cart.catalog = catalog;
+              return cart;
+            })
       ],
       child: MaterialApp.router(
         theme: appTheme,

@@ -11,12 +11,19 @@ class HomeScreen extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           const CustomSliverAppBar(title: 'Home'),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) => ListTile(
-                title: ListItem(index: index),
+          SliverPadding(
+            padding: const EdgeInsets.fromLTRB(8, 8, 8, 32),
+            sliver: SliverGrid(
+              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 200.0,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                childAspectRatio: 0.8,
               ),
-              childCount: 4,
+              delegate: SliverChildBuilderDelegate(
+                (context, index) => ListItem(index: index),
+                childCount: 10,
+              ),
             ),
           ),
         ],

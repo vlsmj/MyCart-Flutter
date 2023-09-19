@@ -16,6 +16,38 @@ class ListItem extends StatelessWidget {
       (catalog) => catalog.getByIndex(index),
     );
 
-    return Text(item.name);
+    return Column(
+      children: [
+        Stack(
+          clipBehavior: Clip.none,
+          children: [
+            Image.network(
+              item.imageUrl,
+            ),
+            Positioned(
+              top: 0,
+              right: 0,
+              child: Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+                padding: const EdgeInsets.all(8),
+                margin: const EdgeInsets.all(8),
+                child: const Icon(
+                  Icons.add_shopping_cart_rounded,
+                  color: Colors.white,
+                ),
+              ),
+            )
+          ],
+        ),
+        Text(
+          item.name,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+        ),
+      ],
+    );
   }
 }
