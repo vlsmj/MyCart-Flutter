@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_cart_provider/common/item.dart';
 import 'package:my_cart_provider/common/sliverappbar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,9 +14,9 @@ class HomeScreen extends StatelessWidget {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (context, index) => ListTile(
-                title: Text('$index'),
+                title: ListItem(index: index),
               ),
-              childCount: 50,
+              childCount: 4,
             ),
           ),
         ],

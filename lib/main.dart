@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_cart_provider/common/theme.dart';
+import 'package:my_cart_provider/models/catalog.dart';
 import 'package:my_cart_provider/screens/cart.dart';
 import 'package:my_cart_provider/screens/home.dart';
 import 'package:my_cart_provider/screens/login.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MainApp());
@@ -31,9 +33,16 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      theme: appTheme,
-      routerConfig: router(),
+    return MultiProvider(
+      providers: [
+        Provider(
+          create: (context) => CatalogModel(),
+        )
+      ],
+      child: MaterialApp.router(
+        theme: appTheme,
+        routerConfig: router(),
+      ),
     );
   }
 }
