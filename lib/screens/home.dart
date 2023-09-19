@@ -21,7 +21,9 @@ class HomeScreen extends StatelessWidget {
                 childAspectRatio: 0.7,
               ),
               delegate: SliverChildBuilderDelegate(
-                (context, index) => ListItem(index: index),
+                (context, id) => ListItem(
+                  id: id,
+                ),
                 childCount: 10,
               ),
             ),

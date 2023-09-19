@@ -74,7 +74,7 @@ class CatalogModel {
         sold: '2.5k sold'),
   ];
 
-  Item getByIndex(int index) => items[index];
+  Item getById(int id) => items[id];
 }
 
 @immutable

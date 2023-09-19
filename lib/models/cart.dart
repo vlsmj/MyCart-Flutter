@@ -11,18 +11,17 @@ class CartModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  final List<int> _listOfIndex = [];
+  final List<int> _listOfIds = [];
 
-  List<Item> get items =>
-      _listOfIndex.map((index) => _catalog.getByIndex(index)).toList();
+  List<Item> get items => _listOfIds.map((id) => _catalog.getById(id)).toList();
 
-  void addToCart(int index) {
-    _listOfIndex.add(index);
+  void addToCart(int id) {
+    _listOfIds.add(id);
     notifyListeners();
   }
 
-  void removeFromCart(index) {
-    _listOfIndex.remove(index);
+  void removeFromCart(id) {
+    _listOfIds.remove(id);
     notifyListeners();
   }
 }
