@@ -14,7 +14,7 @@ final appTheme = ThemeData(
   ),
   colorScheme: const ColorScheme(
       brightness: Brightness.light,
-      primary: Color(0xFFa04025),
+      primary: Color(0xFFeb6d43),
       onPrimary: Color(0xFFffffff),
       secondary: Color(0xFF77574e),
       onSecondary: Color(0xFFffffff),
