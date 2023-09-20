@@ -15,9 +15,14 @@ class LoginScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(40.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            const Image(
+              width: 200,
+              height: 200,
+              image: AssetImage('assets/logo.png'),
+            ),
+            const SizedBox(height: 8),
             Text(
               'Login Screen',
               style: Theme.of(context).textTheme.titleLarge,

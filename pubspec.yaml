@@ -10,6 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   go_router: ^10.1.2
+  intl: ^0.18.1
+  provider: ^6.0.5
 
 dev_dependencies:
   flutter_test:
@@ -24,4 +26,6 @@ flutter:
     - family: MontserratSemiBold
       fonts:
         - asset: fonts/Montserrat-SemiBold.ttf
+  assets:
+    - assets/
   uses-material-design: true
