@@ -13,7 +13,7 @@ void main() {
 }
 
 GoRouter router() {
-  return GoRouter(initialLocation: '/', routes: [
+  return GoRouter(initialLocation: '/login', routes: [
     GoRoute(
       path: '/',
       builder: (context, state) => const HomeScreen(),

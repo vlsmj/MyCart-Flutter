@@ -32,7 +32,17 @@ class ListItem extends StatelessWidget {
               right: 0,
               child: InkWell(
                 onTap: () {
+                  ScaffoldMessenger.of(context).hideCurrentSnackBar();
                   cart.addToCart(id);
+                  final snackBar = SnackBar(
+                    content: Text('${item.name} has been added to your cart.'),
+                    action: SnackBarAction(
+                      label: 'Dismiss',
+                      onPressed: () =>
+                          ScaffoldMessenger.of(context).hideCurrentSnackBar(),
+                    ),
+                  );
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 },
                 child: Container(
                   decoration: BoxDecoration(

@@ -33,7 +33,18 @@ class ListItemCart extends StatelessWidget {
                   margin: const EdgeInsets.all(4),
                   child: InkWell(
                     onTap: () {
+                      ScaffoldMessenger.of(context).hideCurrentSnackBar();
                       cart.removeFromCart(id);
+                      final snackBar = SnackBar(
+                        content:
+                            Text('${item.name} has been removed to your cart.'),
+                        action: SnackBarAction(
+                          label: 'Dismiss',
+                          onPressed: () => ScaffoldMessenger.of(context)
+                              .hideCurrentSnackBar(),
+                        ),
+                      );
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     },
                     child: const Icon(
                       Icons.remove_circle,
