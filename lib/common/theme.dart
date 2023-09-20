@@ -22,7 +22,7 @@ final appTheme = ThemeData(
       onTertiary: Color(0xFFffffff),
       error: Color(0xFFba1a1a),
       onError: Color(0xFFffffff),
-      background: Color(0xFFfffbff),
+      background: Color(0xFFffffff),
       onBackground: Color(0xFF201a19),
       surface: Color(0xFFfffbff),
       onSurface: Color(0xFF201a19),

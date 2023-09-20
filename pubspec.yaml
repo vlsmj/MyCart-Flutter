@@ -26,4 +26,6 @@ flutter:
     - family: MontserratSemiBold
       fonts:
         - asset: fonts/Montserrat-SemiBold.ttf
+  assets:
+    - assets/
   uses-material-design: true
