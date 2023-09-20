@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_cart_provider/common/appbar.dart';
-import 'package:my_cart_provider/common/item.dart';
+import 'package:my_cart_provider/common/itemcart.dart';
 import 'package:my_cart_provider/models/cart.dart';
 import 'package:provider/provider.dart';
 
@@ -18,7 +18,7 @@ class CartScreen extends StatelessWidget {
       ),
       body: ListView.builder(
         itemCount: cart.items.length,
-        itemBuilder: (context, index) => ListItem(id: cart.items[index].id),
+        itemBuilder: (context, index) => ListItemCart(id: cart.items[index].id),
       ),
     );
   }
