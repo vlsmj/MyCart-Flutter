@@ -2,7 +2,11 @@
 
 A sample Flutter project using Provider state management and go_router package for navigation.
 
-![ss1](https://github.com/vlsmj/MyCart-Flutter/assets/11737795/95632512-a8a5-4d62-b7d2-746f37fea8cc)
-![ss2](https://github.com/vlsmj/MyCart-Flutter/assets/11737795/531ed9ad-67a7-44df-92de-1ded37bf5788)
-![ss3](https://github.com/vlsmj/MyCart-Flutter/assets/11737795/c20aee2f-59e8-4305-979d-c8d73b0fc7f0)
-![ss4](https://github.com/vlsmj/MyCart-Flutter/assets/11737795/1ef8a0c3-e259-4441-a59f-949c058184b3)
+![ss1](https://github.com/vlsmj/MyCart-Flutter/assets/11737795/f1159259-8cdc-46db-bb7f-8e7a5b697b58)
+![ss2](https://github.com/vlsmj/MyCart-Flutter/assets/11737795/7b2955c1-a5ea-4eee-90ea-705a8879fa1d)
+![ss3](https://github.com/vlsmj/MyCart-Flutter/assets/11737795/f7c8bc46-2a98-45da-82f1-a84124a384aa)
+![ss4](https://github.com/vlsmj/MyCart-Flutter/assets/11737795/ecf92bc1-eab6-4c41-9279-ab5916817974)
+
+
+
+
