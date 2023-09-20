@@ -48,6 +48,7 @@ class MainApp extends StatelessWidget {
             })
       ],
       child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
         theme: appTheme,
         routerConfig: router(),
       ),
